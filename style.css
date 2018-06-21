@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,900");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,500,700,900");
 /*!
 Theme Name: Advanced Counselor Training
 Theme URI: http://underscores.me/
@@ -397,6 +397,41 @@ template {
   flex-wrap: nowrap;
 }
 
+.p30 {
+  padding: 10px 0;
+}
+
+.p60 {
+  padding: 20px 0;
+}
+
+#back-to-top {
+  background-color: #986bbe;
+  bottom: 10px;
+  box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.07);
+  display: block;
+  height: 40px;
+  position: fixed;
+  right: -45px;
+  transition: all 0.5s ease;
+  width: 40px;
+}
+#back-to-top.visible {
+  right: 10px;
+  transition: all 0.5s ease;
+}
+#back-to-top i {
+  color: #FFFFFF;
+  font-size: 24px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
@@ -410,11 +445,16 @@ textarea {
   font-family: "Raleway", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-size: 1rem;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: subpixel-antialiased;
+  font-weight: 500;
   line-height: 1.5;
+  text-rendering: optimizeLegibility;
 }
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
+  font-weight: 700;
 }
 
 p {
@@ -729,7 +769,11 @@ a:hover, a:active {
 
 .site-header {
   background: #005952;
+  box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.07);
   color: #FFFFFF;
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
 }
 .site-header a {
   color: #FFFFFF;
@@ -826,6 +870,33 @@ object {
   display: block;
 }
 
+@media only screen and (min-width: 768px) {
+  .p30 {
+    padding: 20px 0;
+  }
+
+  .p60 {
+    padding: 40px 0;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .p30 {
+    padding: 25px 0;
+  }
+
+  .p60 {
+    padding: 50px 0;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .p30 {
+    padding: 30px 0;
+  }
+
+  .p60 {
+    padding: 60px 0;
+  }
+}
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/

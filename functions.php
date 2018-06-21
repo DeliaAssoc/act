@@ -7,6 +7,8 @@
  * @package Advanced_Counselor_Training
  */
 
+include 'includes/funcs.php';
+
 if ( ! function_exists( 'act_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.

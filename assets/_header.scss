@@ -1,6 +1,10 @@
 .site-header {
     background: $accent;
+    box-shadow: $light-shadow;
     color: $lightest;
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
 
     a {
         color: $lightest;

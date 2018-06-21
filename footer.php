@@ -28,7 +28,7 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-<a href="#" class="back-to-top">
+<a href="#top" id="back-to-top">
 	<i class="fa fa-chevron-up" aria-hidden="true"></i>
 </a>
 </body>

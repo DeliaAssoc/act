@@ -41,37 +41,9 @@ $( document ).ready( function() {
 			}
 	});
 
-	// DEFAULT PAGE SLIDER
-	$( '.hero-slider' ).slick({
-		arrows: false
-	});
-
-	// CLIENT MODULE SLIDER
-	$( '.client-slider' ).slick({
-		slidesToShow: 4,
-		slideToScroll: 4,
-		responsive: [
-			{
-				breakpoint: 959,
-				settings: {
-					slidesToShow: 2,
-					slideToScroll: 2,
-					arrows: false
-				}
-			},
-			{
-				breakpoint: 567,
-				settings: {
-					slidesToShow: 1,
-					slideToScroll: 1,
-					arrows: false
-				}
-			}
-		]
-	});
 
 	// TESTIMONIALS MODULE SLIDER
-	$( '.testimonial-slider' ).slick({
+	$( '.t-slider' ).slick({
 		arrows: false,
 		dots: true
 	});
@@ -90,6 +62,19 @@ $( document ).ready( function() {
 		}
 	});
 
+	// Show/Hide Back to Top button on scroll
+	$( window ).on( 'scroll', function()
+	{
+		var $scrolled = $( window ).scrollTop(),
+			$btt = $( '#back-to-top' );
 
+		if ( $scrolled > 150 )
+		{
+			$btt.addClass( 'visible' );
+		} else if ( $scrolled < 150 )
+		{
+			$btt.removeClass( 'visible' );
+		}
+	});
 });
 
