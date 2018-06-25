@@ -34,12 +34,15 @@ $( document ).ready( function() {
 
 			e.preventDefault();
 			
-			if ( $('.search-field').hasClass( 'opened' ) ) {
-				$('.search-field').removeClass( 'opened' );
+			if ( $('.search-field').hasClass( 'open' ) ) {
+				$('.search-field').removeClass( 'open' );
 			} else {
-				$('.search-field').addClass( 'opened' );
+				$('.search-field').addClass( 'open' );
 			}
 	});
+
+	// HERO SLIDER
+	$( '.hero-slider' ).slick();
 
 
 	// TESTIMONIALS MODULE SLIDER

@@ -18,6 +18,9 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script async='async' src="<?php echo get_template_directory_uri(); ?>/js/slick.min.js"></script>
+	<style>
+		.hero-slider {display:none;}
+	</style>
 	<?php wp_head(); ?>
 </head>
 
@@ -29,7 +32,7 @@
 		<div class="top-header">
 			<div class="constrain flexxed">
 				<div class="site-branding">
-					<?php the_custom_logo(); ?>
+					<a href="/"><img src="<?php echo get_theme_mod( 'theme_logo' ); ?>" alt="" class="logo"></a>
 				</div><!-- .site-branding -->
 				<div class="header-contact flexxed">
 					<?php if ( get_theme_mod( 'theme_company_street' ) || get_theme_mod( 'theme_company_cityt' ) || get_theme_mod( 'theme_company_state' ) ) : ?>
@@ -63,6 +66,7 @@
 				</nav><!-- #site-navigation -->
 				<div class="header-search">
 					<?php get_search_form(); ?>
+					<a href="#" class="search"><i class="fa fa-search" aria-hidden="true"></i></a>
 				</div>
 			</div><!-- .constrain.flexxed -->
 		</div>

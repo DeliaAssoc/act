@@ -1,12 +1,12 @@
 /* Just for funs and it looks cool */
 ::-moz-selection {
-	background: $ltpurple;
+	background: $ltaccent;
 	color: #fff;
 	text-shadow: none;
 }
 
 ::selection {
-	background: $ltpurple;
+	background: $ltaccent;
 	color: #fff;
 	text-shadow: none;
 }
@@ -38,11 +38,16 @@ hr {
 }
 
 ul, ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0;
+	padding: 0;
+
+	li {
+		list-style-type: none;
+	}
 }
 
 ul {
-	list-style: disc;
+	list-style: none;
 }
 
 ol {
@@ -88,6 +93,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	background: #e6e6e6;
+	border: 0;
 	color: rgba(0, 0, 0, 0.8);
 	font-size: 12px;
 	font-size: 0.75rem;
@@ -128,6 +134,7 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
+	border: 0;
 	color: #666;
 	padding: 3px;
 }
@@ -148,7 +155,9 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
+	background: #d9ebe9;
 	color: #111;
+	outline: none;
 }
 
 select {

@@ -4,9 +4,26 @@
     color: $lightest;
     position: fixed;
     width: 100%;
-    z-index: 99999;
+    z-index: 99997;
 
     a {
         color: $lightest;
+
+        &:hover {
+            color: $red;
+        }
+    }
+
+    .top-header {
+        padding: 10px 0;
+    }
+    
+    .header-contact {
+        display: none;
+    }
+
+    .bottom-header {
+        background: $dkaccent;
+        display: none;
     }
 }

@@ -6,6 +6,7 @@
 --------------------------------------------------------------*/
 a {
 	color: $accent;
+	transition: $t-medium;
 }
 
 a:visited {
@@ -13,7 +14,7 @@ a:visited {
 }
 
 a:hover, a:focus, a:active {
-	color: $purple;
+	color: $darkest;
 }
 
 a:focus {
@@ -22,6 +23,7 @@ a:focus {
 
 a:hover, a:active {
 	outline: 0;
+	transition: $t-medium;
 }
 
 /*--------------------------------------------------------------

@@ -1,8 +1,11 @@
 <?php 
 
 function testimonials_slider_module() { ?>
-	<section class="testimonials slider-module">
+	<section class="testimonials slider-module p60" style="background-image: url( '<?php the_field( 'testimonials_slider_background_image', 'options' ); ?>' );">
 		<div class="constrain">
+			<div class="heading-content">
+				<?php the_field( 'testimonials_slider_heading_content', 'options' ); ?>
+			</div>
 			<div class="t-slider">
 				<?php
 					// WP_Query arguments
@@ -21,7 +24,7 @@ function testimonials_slider_module() { ?>
 							<div class="slide">
 								<?php the_content(); ?>
 								<div class="t-date">
-									<?php the_field( 'testimonial_date' ); ?>
+									~ <?php the_field( 'testimonial_date' ); ?>
 								</div>
 							</div>
 

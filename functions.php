@@ -105,18 +105,59 @@ add_action( 'after_setup_theme', 'act_content_width', 0 );
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function act_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'act' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'act' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+// Register Sidebars
+function act_footer_sidebars() {
+
+	$args = array(
+		'id'            => 'col_1',
+		'class'         => 'footer-col',
+		'name'          => __( 'Footer Column 1', 'text_domain' ),
+		'description'   => __( 'First column in the footer', 'text_domain' ),
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>',
+		'before_widget' => '',
+		'after_widget'  => '',
+	);
+	register_sidebar( $args );
+
+	$args = array(
+		'id'            => 'col_2',
+		'class'         => 'footer-col',
+		'name'          => __( 'Footer Column 2', 'text_domain' ),
+		'description'   => __( 'Second column in the footer', 'text_domain' ),
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>',
+		'before_widget' => '',
+		'after_widget'  => '',
+	);
+	register_sidebar( $args );
+
+	$args = array(
+		'id'            => 'col_3',
+		'class'         => 'footer-col',
+		'name'          => __( 'Footer Column 3', 'text_domain' ),
+		'description'   => __( 'Third column in the footer', 'text_domain' ),
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>',
+		'before_widget' => '',
+		'after_widget'  => '',
+	);
+	register_sidebar( $args );
+
+	// $args = array(
+	// 	'id'            => 'col_4',
+	// 	'class'         => 'footer-col',
+	// 	'name'          => __( 'Footer Column 4', 'text_domain' ),
+	// 	'description'   => __( 'Fourth column in the footer', 'text_domain' ),
+	// 	'before_title'  => '<h4>',
+	// 	'after_title'   => '</h4>',
+	// 'before_widget' => '',
+	// 'after_widget'  => '',
+	// );
+	// register_sidebar( $args );
+
 }
-add_action( 'widgets_init', 'act_widgets_init' );
+add_action( 'widgets_init', 'act_footer_sidebars' );
 
 /**
  * Enqueue scripts and styles.
@@ -202,3 +243,28 @@ function woo_show_excerpt_shop_page() {
  * Remove related products from single product view.
  */
 remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+
+/**
+ * Add 'Details' button after 'Add to Cart' on shop page.
+ */
+function more_information() {
+	global $product;
+		if ($product){
+		$url = esc_url($product->get_permalink() );
+		echo '<a rel="nofollow" href="' .$url .'" class="product-details"><i class="fa fa-list" aria-hidden="true"></i> Details</a>';
+		}
+	}
+add_action( 'woocommerce_after_shop_loop_item', 'more_information' );
+
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'Testimonials Slider Options',
+		'menu_title'	=> 'Testimonials Slider Options',
+		'menu_slug' 	=> 'testimonials-slider-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false,
+		'icon_url'		=> 'dashicons-testimonial',
+		'position'		=> 8
+	));
+}

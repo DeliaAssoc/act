@@ -1,5 +1,47 @@
+@media only screen and ( min-width: 568px ) {
+
+    // HOMEPAGE
+    .hero-slider {
+        color: $lightest;
+
+        .slide {
+            position: relative;
+
+            .slide-content-block {
+                left: 0;
+                margin: 0 auto;
+                position: absolute;
+                right: 0;
+                text-align: center;
+                top: 50%;
+                transform: translateY( -50% );
+            }
+        }
+
+        .slide-content {
+            text-align: center;
+        }
+
+        .slide-content-block.flexxed {
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        }
+
+        .hero-slide-btns {
+            margin: 20px 0 0 0;
+        }
+
+        .slick-prev,
+        .slick-next {
+            top: 50%;
+        }
+    }
+}
+
 @media only screen and ( min-width: 768px ) {
 
+    // CLASSES
     .p30 {
         padding: 20px 0;
     }
@@ -7,10 +49,153 @@
     .p60 {
         padding: 40px 0;
     }
+
+    .testimonials.slider-module {
+
+        .t-slider {
+            margin: 0 auto;
+            max-width: 730px;
+        }
+    }
+
+    // HEADER
+    .site-header {
+        
+        .bottom-header {
+            display: block;
+        }
+
+        .header-search {
+            display: none;
+        }
+
+        .header-contact {
+            font-size: 14px;
+            max-width: 525px;
+            width: 75%;
+
+            &.flexxed {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        .hc-item {
+            -ms-flex-item-align: center;
+                -ms-grid-row-align: center;
+                align-self: center;
+
+                .fa {
+                    margin: 0 3px 0 0;
+                }
+        }
+    }
+
+    .site-branding {
+        width: 25%;
+    }
+
+    .top-header {
+
+        .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+    }
+
+    .main-navigation {
+
+        .menu {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+
+        a {
+            font-size: 12px;
+            font-weight: 500;
+            padding: 5px 0;
+            text-transform: uppercase;
+        }
+    }
+
+    // FOOTER
+    .top-footer {
+
+        .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+
+        &.p30 {
+            padding: 20px 0 0 0;
+        }
+    }
+
+    .footer-col {
+        margin: 0 0 30px 0;
+        width: 47.5%;
+    }
+
+    // HOMEPAGE
+    .hero-slider {
+
+        h2 {
+            font-size: 30px;
+        }
+    }
+}
+
+@media only screen and ( min-width: 960px ) {
+
+    // HEADER
+    .main-navigation {
+
+        a {
+            font-size: 14px;
+        }
+    }
+
+    // HOMEPAGE
+    .hero-slider {
+
+        h2 {
+            font-size: 33px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    }
 }
 
 @media only screen and ( min-width: 1024px ) {
 
+    // CLASSES
     .p30 {
         padding: 25px 0;
     }
@@ -18,15 +203,126 @@
     .p60 {
         padding: 50px 0;
     }
+
+    // HEADER
+    .bottom-header {
+
+        .flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+    }
+
+    .site-header {
+
+        .header-search {
+            display: inline-block;
+            position: relative;
+            width: 17.5%;
+
+            .fa {
+                font-size: 20px;
+                height: 37px;
+                padding: 8px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 37px;
+            }
+        }
+
+        .search-form {
+
+            input[ type=search ] {
+                background-color: transparent;
+                color: #d8d0e0;
+                height: 37px;
+                padding: 0;
+                position: absolute;
+                right: 37px;
+                top: 0;
+                transition: $t-slow;
+                width: 0;
+
+                &.open {
+                    padding: 3px 5px;
+                    transition: $t-slow;
+                    width: 140px;
+                }
+            }
+
+            input[ type=submit ] {
+                display: none;
+            }
+        }
+
+        ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+            color: #d8d0e0;
+        }
+        ::-moz-placeholder { /* Firefox 19+ */
+            color: #d8d0e0;
+        }
+        :-ms-input-placeholder { /* IE 10+ */
+            color: #d8d0e0;
+        }
+        :-moz-placeholder { /* Firefox 18- */
+            color: #d8d0e0;
+        }
+    }
+
+    .main-navigation {
+        width: 80%;
+
+        a {
+            padding: 8px 0;
+        }
+    }
+
+    // FOOTER
+    .top-footer.p30 {
+        padding: 25px 0;
+    }
+
+    .footer-col {
+        margin:0;
+        width: 22.5%;
+    }
 }
 
 @media only screen and ( min-width: 1200px ) {
 
+    // CLASSES
     .p30 {
         padding: 30px 0;
     }
     
     .p60 {
         padding: 60px 0;
+    }
+
+    // FOOTER
+    .top-footer.p30 {
+        padding: 30px 0;
+    }
+
+    // HOMEPAGE
+    .hero-slider {
+
+        h2 {
+            font-size: 45px;
+        }
+
+        p {
+            font-size: 21px;
+        }
+
+        .hero-slide-btns {
+            margin: 30px 0 0 0;
+        }
     }
 }
