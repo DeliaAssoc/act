@@ -55,6 +55,14 @@ a.btn,
 
 	&.white-bg {
 		color: $accent;
+
+		&:hover {
+			color: $red;
+		}
+	}
+
+	&:visited {
+		color: $lightest;
 	}
 }
 
@@ -86,6 +94,10 @@ a.btn-lg,
 
 .accent-bg {
 	background-color: $accent;
+}
+
+.green-bg {
+	background-color: $green;
 }
 
 .red-bg {

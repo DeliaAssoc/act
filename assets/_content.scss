@@ -5,15 +5,97 @@
 ## Posts and pages
 --------------------------------------------------------------*/
 
+// HOMEPAGE
 .hero-slider {
+	background-color: #faf3ff;
 
 	.slide-content-block {
 		padding: 10px 0;
+		text-align: center;
 	}
 
 	img {
 		width: 100%;
 	}
+}
+
+.conference-block {
+	margin: 0 0 20px 0;
+	text-align: center;
+
+	h2 {
+		color: $blackish;
+		font-size: 20px;
+		text-transform: uppercase;
+	}
+
+	&:last-of-type {
+		margin: 0;
+	}
+}
+
+// CONTACT PAGE
+.social-block {
+
+	.flexxed {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+		max-width: 225px;
+	}
+
+	a.social-icon {
+		border: 2px solid #e3cef7;
+		border-radius: 50%;
+		color: #e3cef7;
+		display: inline-block;
+		height: 35px;
+		padding: 4px 0 0 0;
+		position: relative;
+		text-align: center;
+		width: 35px;
+	}
+}
+
+.contact-block {
+	border-bottom: 1px solid #f3f3f3;
+	margin: 0 0 15px 0;
+	padding: 0 0 15px 0;
+
+	&:last-of-type {
+		border: 0;
+	}
+}
+
+.contact-form {
+	border: 1px solid #f3f3f3;
+	background-color: #f9f9f9;
+	padding: 15px;
+}
+
+input[type=submit].wpcf7-submit {
+	background-color: $green;
+	box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.07);
+	color: $lightest;
+	padding: 10px 20px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+// GENERAL
+.page-banner {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 75px;
+}
+
+.main-information {
+	margin: 0 0 20px 0;
 }
 
 /*--------------------------------------------------------------

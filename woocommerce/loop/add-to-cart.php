@@ -22,6 +22,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 global $product;
 
+echo '<div class="prods-btns">';
+
 echo apply_filters( 'woocommerce_loop_add_to_cart_link', // WPCS: XSS ok.
 	sprintf( '<a href="%s" data-quantity="%s" class="%s" %s><i class="fa fa-shopping-cart" aria-hidden="true"></i> %s</a>',
 		esc_url( $product->add_to_cart_url() ),
@@ -31,3 +33,6 @@ echo apply_filters( 'woocommerce_loop_add_to_cart_link', // WPCS: XSS ok.
 		esc_html( $product->add_to_cart_text() )
 	),
 $product, $args );
+
+echo '<a rel="nofollow" href="' .$url .'" class="product-details"><i class="fa fa-list" aria-hidden="true"></i> Details</a>';
+echo '</div>';

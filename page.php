@@ -16,6 +16,12 @@ get_header();
 ?>
 
 	<div id="primary" class="content-area">
+	<?php if ( get_field( 'page_banner' ) ) : ?>
+		<?php $pBanner = get_field( 'page_banner' ); ?>
+		<section class="page-banner" style="background-image:url( '<?php echo $pBanner[ 'url' ]; ?>' );">			
+		</section>
+
+	<?php endif; ?>
 		<main id="main" class="site-main">
 
 		<?php

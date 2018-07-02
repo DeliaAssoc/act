@@ -9,40 +9,40 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'p60' ); ?>>
 	<header class="entry-header">
-        <div class="constrain">
+        <div class="constrain md">
             <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
         </div>
 	</header><!-- .entry-header -->
 
     <section class="overview">
-        <div class="constrain">
+        <div class="constrain md">
             <?php the_field( 'conference_overview' ); ?>
         </div><!-- .constrain -->
     </section>
 
     <section class="conf-dates">
-        <div class="constrain">
+        <div class="constrain md">
             <?php the_field( 'conference_dates' ); ?>
         </div><!-- .constrain -->
     </section>
 
     <section class="conf-location">
-        <div class="constrain">
+        <div class="constrain md">
             <?php the_field( 'conference_address' ); ?>
         </div><!-- .constrain -->
     </section>
 
     <section class="main-information">
-        <div class="constrain">
+        <div class="constrain md">
             <?php the_content(); ?>
         </div><!-- .constrain -->
     </section>
 
     <?php if ( have_rows( 'conference_faqs' ) ) : ?>
         <section class="conf-faq">
-            <div class="constrain">
+            <div class="constrain md">
             <?php while ( have_rows( 'conference_faqs' ) ) : the_row(); ?>
                 <div class="conf-faq">
                     <a href="#" class="faq-question">

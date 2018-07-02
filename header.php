@@ -37,8 +37,8 @@
 				<div class="header-contact flexxed">
 					<?php if ( get_theme_mod( 'theme_company_street' ) || get_theme_mod( 'theme_company_cityt' ) || get_theme_mod( 'theme_company_state' ) ) : ?>
 						<div class="hc-item address">
-							<i class="fa fa-map-marker" aria-hidden="true"></i>
-							<?php echo get_theme_mod( 'theme_company_street' ); ?>, <?php echo get_theme_mod( 'theme_company_city' ); ?> <?php echo get_theme_mod( 'theme_company_state' ); ?>
+							<i class="fa fa-id-card-o" aria-hidden="true"></i>
+							<a target="_blank" href="<?php echo get_theme_mod( 'theme_company_license_link' ); ?>"><?php echo get_theme_mod( 'theme_company_license' ); ?></a>
 						</div>
 					<?php endif; ?>
 						<div class="hc-item phone">

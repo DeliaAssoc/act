@@ -222,39 +222,6 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  */
 show_admin_bar(false);
 
-/**
- * Load WooCommerce compatibility file.
- */
-if ( class_exists( 'WooCommerce' ) ) {
-	require get_template_directory() . '/inc/woocommerce.php';
-}
-
-/**
- * Add short description to products on shop page.
- */
-add_action( 'woocommerce_after_shop_loop_item', 'woo_show_excerpt_shop_page', 5 );
-function woo_show_excerpt_shop_page() {
-	global $product;
-
-	echo $product->post->post_excerpt;
-}
-
-/**
- * Remove related products from single product view.
- */
-remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
-
-/**
- * Add 'Details' button after 'Add to Cart' on shop page.
- */
-function more_information() {
-	global $product;
-		if ($product){
-		$url = esc_url($product->get_permalink() );
-		echo '<a rel="nofollow" href="' .$url .'" class="product-details"><i class="fa fa-list" aria-hidden="true"></i> Details</a>';
-		}
-	}
-add_action( 'woocommerce_after_shop_loop_item', 'more_information' );
 
 if( function_exists('acf_add_options_page') ) {
 
@@ -268,3 +235,5 @@ if( function_exists('acf_add_options_page') ) {
 		'position'		=> 8
 	));
 }
+
+include 'includes/woofuncs.php';

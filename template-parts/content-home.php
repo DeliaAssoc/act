@@ -36,18 +36,54 @@
         </div>
     <?php endif; ?>
 
-    <section class="main-content p60">
-        <div class="constrain">
-            <?php the_content(); ?>
+    <section class="home-confs p60">
+        <div class="constrain flexxed">
+            <?php
+
+                $options = array(
+                    'post_type'              => array( 'conference' ),
+                    'posts_per_page'         => '-1',
+                    'order'                  => 'DESC',
+                );
+                // The Query
+                $the_query = new WP_Query( $options );
+
+                // The Loop
+                if ( $the_query->have_posts() ) {
+
+                    while ( $the_query->have_posts() ) {
+                        
+                        $the_query->the_post(); ?>
+                        
+                       <div class="conference-block">
+                           <?php the_post_thumbnail(); ?>
+                           <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+                           <a href="<?php the_permalink(); ?>" class="register btn btn-md green-bg">Register</a>
+                       </div>
+                    
+                    <?php }
+
+                    /* Restore original Post Data */
+                    wp_reset_postdata();
+                } else {
+                    // no posts found
+                } 
+            ?>
         </div>
     </section>
 
     <?php testimonials_slider_module(); ?>
 
-    <section class="recent-products p60">
-        <div class="constrain">
-            <?php echo do_shortcode( '[recent_products per_page="4" columns="4"]' ); ?>
+    <section class="main-content p60">
+        <div class="constrain md">
+            <?php the_content(); ?>
         </div>
     </section>
+
+    <!-- <section class="recent-products p60">
+        <div class="constrain">
+            <?php echo do_shortcode( '[recent_products per_page="4" columns="3"]' ); ?>
+        </div>
+    </section> -->
 
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -9,9 +9,9 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class( 'p60' ); ?>>
 	<header class="entry-header">
-		<div class="constrain">
+		<div class="constrain md">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		</div><!-- .constrain -->
 	</header><!-- .entry-header -->
@@ -19,7 +19,7 @@
 	<?php act_post_thumbnail(); ?>
 
 	<div class="entry-content">
-		<div class="constrain">
+		<div class="constrain md">
 			<?php the_content(); ?>
 		</div><!-- .constrain -->
 	</div><!-- .entry-content -->

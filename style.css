@@ -418,6 +418,14 @@ a.btn.white-bg,
 .btn.white-bg {
   color: #783b83;
 }
+a.btn.white-bg:hover,
+.btn.white-bg:hover {
+  color: #ff5a5a;
+}
+a.btn:visited,
+.btn:visited {
+  color: #FFFFFF;
+}
 
 a.btn-sm,
 .btn-sm {
@@ -447,6 +455,10 @@ a.btn-lg,
 
 .accent-bg {
   background-color: #783b83;
+}
+
+.green-bg {
+  background-color: #2eaf6a;
 }
 
 .red-bg {
@@ -742,9 +754,10 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-  border: 0;
+  border: 1px solid #f3f3f3;
   color: #666;
-  padding: 3px;
+  padding: 3px 7px;
+  width: 100%;
 }
 
 input[type="text"]:focus,
@@ -763,13 +776,14 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-  background: #d9ebe9;
+  background: #eaf7f5;
   color: #111;
   outline: none;
 }
 
 select {
   border: 1px solid #ccc;
+  width: 100%;
 }
 
 textarea {
@@ -785,6 +799,7 @@ textarea {
 a {
   color: #783b83;
   transition: all 0.25s ease;
+  text-decoration: none;
 }
 
 a:visited {
@@ -927,11 +942,85 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
+.hero-slider {
+  background-color: #faf3ff;
+}
 .hero-slider .slide-content-block {
   padding: 10px 0;
+  text-align: center;
 }
 .hero-slider img {
   width: 100%;
+}
+
+.conference-block {
+  margin: 0 0 20px 0;
+  text-align: center;
+}
+.conference-block h2 {
+  color: #363636;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.conference-block:last-of-type {
+  margin: 0;
+}
+
+.social-block .flexxed {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  max-width: 225px;
+}
+.social-block a.social-icon {
+  border: 2px solid #e3cef7;
+  border-radius: 50%;
+  color: #e3cef7;
+  display: inline-block;
+  height: 35px;
+  padding: 4px 0 0 0;
+  position: relative;
+  text-align: center;
+  width: 35px;
+}
+
+.contact-block {
+  border-bottom: 1px solid #f3f3f3;
+  margin: 0 0 15px 0;
+  padding: 0 0 15px 0;
+}
+.contact-block:last-of-type {
+  border: 0;
+}
+
+.contact-form {
+  border: 1px solid #f3f3f3;
+  background-color: #f9f9f9;
+  padding: 15px;
+}
+
+input[type=submit].wpcf7-submit {
+  background-color: #2eaf6a;
+  box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.07);
+  color: #FFFFFF;
+  padding: 10px 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.page-banner {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 75px;
+}
+
+.main-information {
+  margin: 0 0 20px 0;
 }
 
 /*--------------------------------------------------------------
@@ -1017,6 +1106,30 @@ object {
 
 .gallery-caption {
   display: block;
+}
+
+.products .columns-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.products .product {
+  border: 1px solid #ccc;
+}
+.products .products-info-wrapper {
+  padding: 5px;
+}
+.products .product-cats {
+  border-bottom: 1px solid #ccc;
+  padding: 3px 5px;
+}
+.products .prods-btns {
+  border-top: 1px solid #ccc;
+  padding: 5px 0 0 0;
 }
 
 .site-footer {
@@ -1129,6 +1242,10 @@ object {
   .hero-slider .slick-next {
     top: 50%;
   }
+
+  .conference-block {
+    margin: 0 0 30px 0;
+  }
 }
 @media only screen and (min-width: 768px) {
   .p30 {
@@ -1152,7 +1269,7 @@ object {
   }
   .site-header .header-contact {
     font-size: 14px;
-    max-width: 525px;
+    max-width: 560px;
     width: 75%;
   }
   .site-header .header-contact.flexxed {
@@ -1205,6 +1322,24 @@ object {
     text-transform: uppercase;
   }
 
+  .hero-slider h2 {
+    font-size: 30px;
+  }
+
+  .home-confs .flexxed {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .conference-block {
+    margin: 0;
+    width: 31%;
+  }
+
+  .page-banner {
+    height: 125px;
+  }
+
   .top-footer .flexxed {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1223,10 +1358,6 @@ object {
   .footer-col {
     margin: 0 0 30px 0;
     width: 47.5%;
-  }
-
-  .hero-slider h2 {
-    font-size: 30px;
   }
 }
 @media only screen and (min-width: 960px) {
@@ -1315,6 +1446,15 @@ object {
   }
   .main-navigation a {
     padding: 8px 0;
+  }
+
+  .conference-block {
+    margin: 0;
+    width: 30%;
+  }
+
+  .page-banner {
+    height: 200px;
   }
 
   .top-footer.p30 {

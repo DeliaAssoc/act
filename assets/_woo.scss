@@ -1,0 +1,31 @@
+// WOOCOMMERCE
+.products {
+
+    .columns-3 {
+       display: -webkit-box;
+       display: -ms-flexbox;
+       display: flex;
+       -webkit-box-orient: vertical;
+       -webkit-box-direction: normal;
+           -ms-flex-direction: column;
+               flex-direction: column; 
+    }
+
+    .product {
+        border: 1px solid #ccc;
+    }
+
+    .products-info-wrapper {
+        padding: 5px;
+    }
+
+    .product-cats {
+        border-bottom: 1px solid #ccc;
+        padding: 3px 5px;
+    }
+
+    .prods-btns {
+        border-top: 1px solid #ccc;
+        padding: 5px 0 0 0;
+    }
+}

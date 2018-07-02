@@ -134,9 +134,10 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	border: 0;
+	border: 1px solid #f3f3f3;
 	color: #666;
-	padding: 3px;
+	padding: 3px 7px;
+	width: 100%;
 }
 
 input[type="text"]:focus,
@@ -155,13 +156,14 @@ input[type="datetime"]:focus,
 input[type="datetime-local"]:focus,
 input[type="color"]:focus,
 textarea:focus {
-	background: #d9ebe9;
+	background: #eaf7f5;
 	color: #111;
 	outline: none;
 }
 
 select {
 	border: 1px solid #ccc;
+	width: 100%;
 }
 
 textarea {
