@@ -31,9 +31,9 @@
                         <?php endif; ?>
                     </div><!-- .constrain -->
                 </div>
-            </div>
+            </div><!-- .slide -->
         <?php endwhile; ?>
-        </div>
+        </div><!-- .hero-slider -->
     <?php endif; ?>
 
     <section class="home-confs p60">
@@ -58,7 +58,7 @@
                        <div class="conference-block">
                            <?php the_post_thumbnail(); ?>
                            <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
-                           <a href="<?php the_permalink(); ?>" class="register btn btn-md green-bg">Register</a>
+                           <a href="<?php the_permalink(); ?>" class="register btn btn-md green-bg">Preview</a>
                        </div>
                     
                     <?php }
@@ -69,16 +69,16 @@
                     // no posts found
                 } 
             ?>
-        </div>
-    </section>
+        </div><!-- .constrain -->
+    </section><!-- .home-confs -->
 
     <?php testimonials_slider_module(); ?>
 
     <section class="main-content p60">
         <div class="constrain md">
             <?php the_content(); ?>
-        </div>
-    </section>
+        </div><!-- .constrain.md -->
+    </section><!-- .main-content -->
 
     <!-- <section class="recent-products p60">
         <div class="constrain">

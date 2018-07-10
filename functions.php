@@ -236,4 +236,5 @@ if( function_exists('acf_add_options_page') ) {
 	));
 }
 
-include 'includes/woofuncs.php';
+// include 'includes/woofuncs.php';
+include 'includes/wysiwyg.php';

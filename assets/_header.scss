@@ -10,7 +10,7 @@
         color: $lightest;
 
         &:hover {
-            color: $red;
+            color: $green;
         }
     }
 
@@ -25,5 +25,12 @@
     .bottom-header {
         background: $dkaccent;
         display: none;
+    }
+}
+
+.header-search {
+
+    input[type=search] {
+        border: 0;
     }
 }

@@ -22,6 +22,10 @@
 	max-width: 1200px;
 	min-width: 320px;
 	margin: 0 auto;
+
+	&.md {
+		max-width: 1100px;
+	}
 }
 
 .flexxed {
@@ -57,7 +61,7 @@ a.btn,
 		color: $accent;
 
 		&:hover {
-			color: $red;
+			color: $green;
 		}
 	}
 
@@ -101,7 +105,7 @@ a.btn-lg,
 }
 
 .red-bg {
-	background-color: $red;
+	background-color: $green;
 }
 
 #back-to-top {

@@ -213,6 +213,41 @@
             font-size: 18px;
         }
     }
+
+    // CONTACT PAGE
+    .contact-info {
+
+        &.flexxed {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+        }
+
+        .one-third {
+            width: 31.5%;
+        }
+
+        .two-third {
+            width: 63%;
+        }
+    }
+
+    .contact-form-c2 {
+        -webkit-column-count: 2;
+                column-count: 2;
+        -webkit-column-gap: 30px;
+                column-gap: 30px;
+    }
+
+    // GENERAL
+    .main-information {
+        margin: 0 0 30px;
+    }
+
 }
 
 @media only screen and ( min-width: 1024px ) {
@@ -358,4 +393,10 @@
             margin: 30px 0 0 0;
         }
     }
+
+    // GENERAL
+        // GENERAL
+        .main-information {
+            margin: 0 0 50px;
+        }
 }

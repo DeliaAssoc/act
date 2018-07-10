@@ -1,8 +1,8 @@
 $( document ).ready( function() {
 
 	// VARIABLES
-	$modal = $( '.modal-search-window' ),
-	$modalClose = $( '.modal-search-window .close' ),
+	// $modal = $( '.modal-search-window' ),
+	// $modalClose = $( '.modal-search-window .close' ),
 	$mobSearch = $( 'a.mobile-search' ),
 	$dsktpSearch = $( 'a.dsktp-search' ),
 	$headerHeight = $( '.site-header' ).height(),
@@ -11,23 +11,23 @@ $( document ).ready( function() {
 	$siteCont.css( 'paddingTop', $headerHeight - 5 );
 
 	// OPEN/CLOSE MOBILE SEARCH
-	$mobSearch.on( 'click', function( e ){
+	// $mobSearch.on( 'click', function( e ){
 
-		e.preventDefault();
-		$modal.fadeIn();
+	// 	e.preventDefault();
+	// 	$modal.fadeIn();
 
-	});
+	// });
 
-	$dsktpSearch.on( 'click', function( e ){
+	// $dsktpSearch.on( 'click', function( e ){
 
-		e.preventDefault();
-		$modal.fadeIn();
+	// 	e.preventDefault();
+	// 	$modal.fadeIn();
 
-	});
+	// });
 
-	( $modalClose ).on( 'click', function( e ){
-		$modal.fadeOut();
-	});
+	// ( $modalClose ).on( 'click', function( e ){
+	// 	$modal.fadeOut();
+	// });
 
 	// OPEN SEARCH FORM
 	$( 'a.search' ).on( 'click', function( e ){
@@ -49,6 +49,26 @@ $( document ).ready( function() {
 	$( '.t-slider' ).slick({
 		arrows: false,
 		dots: true
+	});
+
+	// FAQ ACCORDIAN
+	$( 'a.faq-question' ).on( 'click', function( e ){
+
+		e.preventDefault();
+
+		$( this ).toggleClass( 'active' );
+		$( this ).siblings( '.faq-answer' ).slideToggle( 'medium', 'swing' );
+
+	});
+
+	// ACCORDION TEMPLATE PAGE
+	$( 'a.accordion-heading' ).on( 'click', function( e ){
+
+		e.preventDefault();
+
+		$( this ).toggleClass( 'active' );
+		$( this ).siblings( '.accordion-content' ).slideToggle( 'slow', 'swing' );
+
 	});
 
 	// Smooth Scroll for Back To Top Button *Thank you CSS-TRICKS*

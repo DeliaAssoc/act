@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: FAQ Template
+ * Template Name: Accordion Template
  *
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
@@ -24,7 +24,7 @@ get_header();
 		while ( have_posts() ) :
 			the_post();
 
-			get_template_part( 'template-parts/content', 'faqs' );
+			get_template_part( 'template-parts/content', 'accordion' );
 
 
 		endwhile; // End of the loop.

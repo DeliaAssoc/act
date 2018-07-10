@@ -34,6 +34,50 @@
 	}
 }
 
+// FAQ PAGE
+.faq-section {
+	border-top: 1px solid #f3f3f3;
+	border-right: 1px solid #f3f3f3;
+	border-left: 1px solid #f3f3f3;
+	margin: 0 0 20px 0;
+
+	h2 {
+		background-color: #eeeeee;
+		border-bottom: 1px solid #f3f3f3;
+		margin: 0;
+		padding: 10px;
+	}
+
+	.faq-question {
+		border-bottom: 1px solid #f3f3f3;
+		display: block;
+		padding: 10px 10px 10px 40px;
+		position: relative;
+
+		&.active {
+			background-color: #e3cef7;
+		}
+
+		&:before {
+			content: '\f128';
+			font-family: $fa4;
+			font-size: 45px;
+			left: 5px;
+			opacity: 0.5;
+			position: absolute;
+			top: 50%;
+			transform: translateY( -50% );
+		}
+	}
+
+	.faq-answer {
+		background-color: #f9f9f9;
+		border-bottom: 1px solid #f3f3f3;
+		display: none;
+		padding: 10px;
+	}
+}
+
 // CONTACT PAGE
 .social-block {
 
